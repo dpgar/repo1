@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Didact+Gothic&family=Playfair+Display:ital@0;1&display=swap');
+
+
+
+*{
+	font-family: 'Playfair Display', serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+	
+}
+
+body{
+	background-color: #FAF9F9;
+}
+
+h1,h2,h3{
+	font-family: 'Playfair Display', serif;
+}
+
+
+p{
+	line-height: 2rem;
+	font-size: 1.6rem;
+}
+
+.textBold{
+	font-weight: 600;
+}
+
+.textItalic{
+	font-style: italic;
+}
+
+
+.bgLight{
+	background-color: #E8E8E8;
+}
+
+.bgDark{
+	
+	background-color: #0F0F0F
+}
+
+/*Grid*/
+
+.contenedor{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: 
+	"header header" 
+	"main   main"   
+	"footer footer" ;
+}
+
+.contenedor > div,
+.contenedor .cabecera{
+	grid-area: header;
+}
+.contenedor .contenido{
+	grid-area: main;
+}
+.contenedor .pie {
+	grid-area: footer;
+}
+
+
+
+/* Cabecera */
+
+
+.botonera {
+	background: #acaaaa;
+	padding: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+
+	.logo{
+	height: 6rem;
+	margin: 3px;
+} 
+  .botonera ul {
+	list-style-type: none;
+	font-size: initial;
+	display: flex;
+
+  }
+
+  .botonera ul li{
+	list-style: none;
+	margin-right: 20px;
+}
+ 
+   .botonera a {
+	color: #0F0F0F;
+	text-decoration: none;
+  } 
+
+  
+  .botonera ul li a:hover{
+	color: black;
+	font-weight: 600;
+}
+
+
+
+ /*contenido principal*/
+
+.pst{
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.pst div h1 {
+	font-size: 4rem;
+	text-align: center;
+}
+
+.pst div h2{
+	font-size: 3rem;
+	text-align: center;
+}
+
+.pst div p{
+	font-size: 2rem;
+	text-align: center;
+}
+
+.align-self{
+	align-self: center;
+}
+
+  
+
+
+ /*pie de pagina*/
+
+.pie{
+    line-height: 3;
+    background-color: #0F0F0F;
+	color:#fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.pie h3{
+	font-size: 2rem;
+	margin-left: 15px;
+	margin-right: 20px;
+}
+
+.pie ul{
+	list-style-type: none;
+	font-size: initial;
+	width: 50%;
+	padding: 2rem;
+	display: flex;
+
+}
+
+.pie ul li{
+	list-style: none;
+	margin-right: 20px;
+}
+
+.pie ul li a img{
+	height: 30px;
+}
+
+.pie a {
+	color: #0F0F0F;
+	text-decoration: none;
+  }
+
+.pie p{
+	text-align: end;
+}
+
+
+ /*Porfolio*/
+
+.pflio{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+
+.pflio h2{
+	font-size: 3rem;
+	margin: 3rem;
+}
+
+.pflio div img{
+	margin-right: 20px;
+}
+
+/*personal - galeria*/
+
+.gallery__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212324;
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.gallery__item:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.container h2{
+	font-size: 3rem;
+	margin: 3rem;
+}
+
+.content-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+}
+@media (min-width: 600px) { 
+    .wide {
+        grid-column: span 2;
+    }
+    .tall{
+        grid-row: span 2;
+    }
+}
+
+ /*Contratar*/
+
+
+.cntrar{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+ .cntrar fieldset{
+	margin: 2rem;
+	padding: 3rem;
+}
+
+ .cntrar fieldset legend{
+	font-size:5rem;
+	padding-left: 2rem;
+  	padding-right: 2rem;
+}
+
+ .cntrar fieldset h2{
+	font-size: 3rem;
+	padding: 5px;
+}
+
+ .cntrar fieldset h3{
+	font-size: 2rem;
+	padding: 5px;
+}
+
+ .cntrar fieldset p{
+	font-size: 1.6rem;
+	padding: 5px;
+}
+
+.btn{
+	margin: 1rem;
+	margin-left: 3rem;
+	padding: 2rem;
+	background-color: #131212;
+	color: #F0F0F0;
+	text-decoration: none;
+	font-size: 2rem;
+} 
+
+
+/* Sobre mi */
+
+.sbrmi{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.sbrmi div img{
+	margin: 10rem;
+	padding: 0;
+
+}
+
+.sbrmi div h3{
+	font-size: 4rem;
+}
+
+.sbrmi div p{
+	font-size: 1.6rem;
+}
+
+
+/* Contacto */
+
+.contc{
+	display: flex;
+	flex-direction: column;
+}
+
+.contc fieldset{
+	margin: 2rem;
+	padding: 3rem;
+}
+
+.contc legend{
+	font-size:5rem;
+	padding-left: 2rem;
+  	padding-right: 2rem;
+	margin: 2rem;
+}
+
+.contc form{
+	margin: 2rem;
+}
+
+.contc label{
+	font-size: 2rem;
+	padding: 5px;
+}
+
+.contc textarea{
+	height: 7rem;
+}
+
+.contc p{
+	font-size: 1.6rem;
+	padding: 5px;
+	margin: 2rem;
+}
+
+.btnv2{
+	margin: 1rem;
+	margin-left: 3rem;
+	padding: 2rem;
+	background-color: #131212;
+	color: #F0F0F0;
+	text-decoration: none;
+	font-size: 2rem;
+} 
+
+
+/* Media Querie */
+
+@media screen and (max-width: 768px) {
+	.contenedor {
+		grid-template-areas: 
+		"header header" 
+		"main   main"   
+		"footer footer" ;
+	}
+
+	.botonera {
+		background: #acaaaa;
+		padding: 5px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+	  }
+
+	  .botonera a {
+		color: #0f0f0f;
+		text-decoration: none;
+		font-size: 14px;
+	  }
+	  .botonera ul li {
+		list-style: none;
+		margin-right: 10px;
+	  }
+	
+	  .pst {
+		display: flex;
+		justify-content: space-between;
+		box-sizing: border-box;
+		flex-direction: column;
+	  }
+
+	  .pst img{
+		width: 100%;
+	  } 
+	
+	  .pflio div img{
+		width: 100%;
+	}
+
+	  .cntrar {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	  }
+	
+	  .sbrmi {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	  }
+	
+	  .sbrmi div img {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	  }
+
+	  .sbrmi div h3{
+		width: 100%;
+	}
+	
+	.sbrmi div p{
+		width: 100%;
+	}
+	
+	  .contc fieldset {
+		margin: 0;
+		padding: 0;
+	  }
+	
+	  .pie {
+		line-height: 3;
+		background-color: #0f0f0f;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	  }
+	
+	  .pie a {
+		color: white;
+		text-decoration: none;
+	  }
+	
+	  .pie p {
+		text-align: center;
+	  }
+}
+
+@media screen and (max-width: 1024px) {
+	.contenedor {
+		grid-template-areas: 
+		"header header" 
+		"main   main"   
+		"footer footer" ;
+	}
+}
